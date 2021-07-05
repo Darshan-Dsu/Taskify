@@ -2,7 +2,7 @@ const bodyParser=require("body-parser");
 const express=require("express");
 const date=require(__dirname+"/date.js");
 const app=express();
-console.log(date.getDay());
+// console.log(date.getDay());
 var items=["Eat!","Sleep!"];
 var workItems=[];
 app.set("view engine","ejs");
@@ -44,7 +44,7 @@ app.get("/",function(req,res){
 })
 
 app.post("/",function(req,res){
-    console.log(req.body);
+    
     if(req.body.workList=="Work"){
         var item=req.body.todo;
         workItems.push(item);
